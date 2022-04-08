@@ -3,11 +3,12 @@ Naval Fate.
 
 Usage: send_msg TEXT
 """
+import os
 import requests
 from docopt import docopt
 
-BOT_TOKEN = '2115620820:AAGZAGg0tj3Cq5uPAKhkIbZBijUq3q1NB5Y'
-BOT_CHAT_ID = '1573551103'
+BOT_TOKEN = os.environ.get('BOT_TOKEN')
+BOT_CHAT_ID = os.environ.get('BOT_CHAT_ID')
 BASE_STRING = 'https://api.telegram.org/bot' + BOT_TOKEN
 
 
